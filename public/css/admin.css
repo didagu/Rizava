@@ -1,0 +1,144 @@
+@import 'https://fonts.googleapis.com/css?family=Abel|Bree+Serif|Dancing+Script|Exo+2|Lobster|Nova+Flat|Nunito|Shadows+Into+Light|Shrikhand|Ubuntu+Condensed';
+
+html,body{
+  height:100%;
+}
+
+body{
+  background-color:#fdfdfd;
+}
+
+.wrap{
+  position:relative;
+  border-bottom:3px double lightgrey;
+  background-color:#fdfdfd;
+}
+
+header{
+  position:fixed;
+  width:100%;
+  z-index:999;
+  top: 0;
+}
+
+.imghdr>svg>a:hover{
+  text-decoration:none;
+}
+
+.imghdr{
+  padding-left:30px;
+}
+
+header h2{
+  padding-left:20px;
+  margin:10px 0px;
+}
+
+.wrap button{
+  margin:10px 25px;
+}
+
+.side-nav a:last-child{
+  text-decoration:underline;
+}
+
+ul>.nav>.nav-pills>li{
+  background:linear-gradient(to bottom,#e6e6e6,#f2f2f2)
+}
+
+.tab-content-inside{
+  padding:0px 20px 10px 20px;
+}
+
+[colspan="2"] {
+  text-align:center;
+}
+
+#accept>.tab-content-inside>.nav>li>a{
+  color:black;
+  text-decoration:underline;
+}
+
+.modal-title{
+  font-weight:bold;
+}
+
+.detail h5{
+  margin:10px 0px;
+  font-weight:bold;
+}
+
+.detail p{
+  font-weight:bold;
+  margin-bottom:5px;
+}
+
+.more-info,.ser,.his{
+  margin-left:30px;
+}
+
+.more-info>div>p{
+  font-weight:normal;
+  margin-bottom:5px;
+  font-size:0.875em;
+}
+
+.extra h5{
+  margin:10px 0px;
+  font-weight:bold;
+  float:right;
+}
+
+.other-info{
+  clear:both;
+}
+
+.other-info p{
+  font-weight:bold;
+  margin-bottom:5px;
+}
+
+.other-info>div>p{
+  font-weight:normal;
+  margin-bottom:5px;
+  font-size:0.875em;
+}
+
+.con-action h5{
+  text-align:left;
+  margin:0px 0px;
+}
+
+.con-action hr {
+   margin-top:0
+}
+
+.con-action p{
+  text-align:left;
+}
+
+.topBtn{
+  position:fixed;
+  bottom:0;
+  right:0;
+  margin: 0px 30px 15px 0px;
+  border:1px solid black;
+  border-radius:10px;
+  background-color:black;
+  opacity:0.6;
+  width:45px;
+  height:45px;
+  text-align:center;
+  padding-top:5px;
+  cursor:pointer;
+  display:none;
+  -webkit-transition:box-shadow 0.2s,opacity 0.2s;
+  -moz-transition:box-shadow 0.2s,opacity 0.2s;
+  -o-transition:box-shadow 0.2s,opacity 0.2s;
+  color:white;
+}
+
+.topBtn:hover{
+  opacity:0.8;
+  box-shadow:5px 5px 15px grey;
+}
