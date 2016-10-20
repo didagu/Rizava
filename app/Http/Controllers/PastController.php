@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class AcceptController extends Controller
+class PastController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class AcceptController extends Controller
      */
     public function index()
     {
-        return view("admin.accept.future");
+        return view("admin.accept.past");
     }
 
     /**

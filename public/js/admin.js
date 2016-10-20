@@ -1,42 +1,29 @@
 $(document).ready(function(){
-  var win = $( window );
-
-  function place(){
-    var hd = $( "header" ).height() + 10;
-    $( "section" ).css( "margin-top" , hd + "px" );
-  }
-
-  place();
-
-  win.on( "resize" , function(){
-    place();
+  $( "ul.list-group>a" ).on( "click" , function(){
+    $( this ).css( "background" , "linear-gradient(to bottom,#e6e6e6,#f2f2f2)" );
   });
 
-  win.on( "scroll" , function(){
-    if($( this ).scrollTop() > 120){
+  $( window ).on( "scroll" , function(){
+    if($( this ).scrollTop() > 120)
+    {
       $( ".topBtn" ).fadeIn( "500" );
-    } else {
+    }
+    else
+    {
       $( ".topBtn" ).fadeOut( "500" );
     }
-  });
-
-  $( ".topBtn" ).on( "click" , function(){
-    $( this ).parent().slideUp( "slow" );
   });
 
   $( "[data-toggle='tooltip']" ).tooltip();
 
   $( "[data-toggle='modal']" ).on( "click" , function(){
-    if($( this ).closest( "div.tab-pane" ).attr( "id" ) != "pend"){
+    if($( this ).closest( "div.tab-content-inside" ).attr( "id" ) != "pend")
+    {
+      alert("It's ok");
       $( "fieldset" ).css( "display" , "none" );
     }
-    // else if
-    //   ($( this ).closest( "div.tab-pane" ).attr( "id" ) == "all")
-    //   && ($( this ).closest( "div.tab-pane" ).find( ".state" ).html() == ""))
-    //   {
-    //   $( "fieldset" ).css( "display" , "block" );
-    // }
-    else {
+    else
+    {
       $( "fieldset" ).css( "display" , "block" );
     }
   });

@@ -18,6 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get("/admin", [ "uses" => "AdminController@index" ]);
+Route::get("/accept/past", [ "uses" => "PastController@index" ]);
 Route::get("/admin/accept", [ "uses" => "AcceptController@index" ]);
 Route::get("/admin/reject", [ "uses" => "RejectController@index" ]);
 Route::get("/admin/all", [ "uses" => "AllController@index" ]);
