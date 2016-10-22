@@ -1,0 +1,118 @@
+/*different levels of box shadows for the cards and buttons*/
+.shadow-1 {
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.shadow-2 {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.shadow-3 {
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.shadow-4 {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.shadow-5 {
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+.shadow-2:hover {
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/*button hover box shadows*/
+.btn:hover {
+box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+/*not used*/
+.card {
+      width: 200px;
+      height: 200px;
+      background: #f4f4f4;
+      -webkit-transition: all 250ms;
+      -moz-transition: all 250ms;
+      transition: all 250ms;     
+  }
+  /*not used*/
+
+/*box shadow for cards */
+ .cards {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+}
+
+/*hover box shadow for cards*/
+.cards:hover {
+	/*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);*/	
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	  -webkit-transition: all 250ms;
+      -moz-transition: all 250ms;
+      transition: all 250ms;     
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+/*.cus-navbar-margin {
+	padding: 20px;
+}*/
+
+.cus-navbar-brand {
+	font-size: 40px;
+	margin-right: 40px;
+	color: #f99527;
+
+}
+
+.cus-navbar-links {
+	font-size: 20px;
+	margin-right: 2em;
+	color: #f99527;	
+}
+
+.cus-navbar-links li {
+	color: #f99527;	
+}
+
+/*all links color*/
+ a:hover {
+color: #f99527;
+}
+
+.social-icons{
+	color: white;
+}
+
+cus-event-form-header {
+	color: #f99527;
+	font-size: 180px;
+}
+
+/*material design css for cards*/
+
+.demo-card-wide.mdl-card {
+        /*width: 350px;*/
+        text-center: center;
+      }
+      .demo-card-wide > .mdl-card__title {
+        color: #fff;
+        height: 176px;
+        background: url('atom.png') center / cover;
+      }
+      .demo-card-wide > .mdl-card__menu {
+        color: #fff;
+      }
+
+      .cards-spacing {
+        width: auto; 
+        height: auto; 
+        margin-top: 10px; 
+        margin-bottom: 10px;
+      }
+/*material design cards end*/

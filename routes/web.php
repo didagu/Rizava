@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/book-event', 'BookEventController@index');
+
 Route::get("/admin", [ "uses" => "AdminController@index" ]);
 Route::get("/accept/past", [ "uses" => "PastController@index" ]);
 Route::get("/admin/accept", [ "uses" => "AcceptController@index" ]);
