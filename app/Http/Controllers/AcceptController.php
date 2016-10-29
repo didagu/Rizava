@@ -4,19 +4,33 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use App\Event;
 
 class AcceptController extends Controller
 {
+    function __construct(){
+        $this->middleware("auth");
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view("admin.accept.future");
-    }
+     public function index()
+     {
+         $bookings = Event::where("accept_id",1)->where("cancel_id",null)->get();
+        //  $b = [];
+         foreach($bookings as $booking){
+           $this->accessor($booking);
+          //  if($booking->cancel_id == 1){
+          //    continue;
+          //  } else {
+          //    $b[] = $booking;
+          //  }
+         }
+        //  return $bookings;
+         return view("admin.accept")->with("bookings",$bookings);
+     }
 
     /**
      * Show the form for creating a new resource.

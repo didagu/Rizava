@@ -1,35 +1,424 @@
-html,body{
-	height:100%;
-	background-color:#f9f9f9;
-	overflow-y:hidden;
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+@font-face {
+  font-family: 'Sailec';
+  font-weight: bold;
+  src: url('../fonts/sailec/31293A_0_0.eot');
+  src: url('../fonts/sailec/31293A_0_0.eot?#iefix') format('embedded-opentype'), url('../fonts/sailec/31293A_0_0.woff2') format('woff2'), url('../fonts/sailec/31293A_0_0.woff') format('woff'), url('../fonts/sailec/31293A_0_0.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Sailec';
+  font-weight: 100;
+  src: url('../fonts/sailec/31293A_1_0.eot');
+  src: url('../fonts/sailec/31293A_1_0.eot?#iefix') format('embedded-opentype'), url('../fonts/sailec/31293A_1_0.woff2') format('woff2'), url('../fonts/sailec/31293A_1_0.woff') format('woff'), url('../fonts/sailec/31293A_1_0.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Sailec';
+  font-weight: 900;
+  src: url('../fonts/sailec/31293A_2_0.eot');
+  src: url('../fonts/sailec/31293A_2_0.eot?#iefix') format('embedded-opentype'), url('../fonts/sailec/31293A_2_0.woff2') format('woff2'), url('../fonts/sailec/31293A_2_0.woff') format('woff'), url('../fonts/sailec/31293A_2_0.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Sailec';
+  font-weight: 200;
+  src: url('../fonts/sailec/31293A_3_0.eot');
+  src: url('../fonts/sailec/31293A_3_0.eot?#iefix') format('embedded-opentype'), url('../fonts/sailec/31293A_3_0.woff2') format('woff2'), url('../fonts/sailec/31293A_3_0.woff') format('woff'), url('../fonts/sailec/31293A_3_0.ttf') format('truetype');
+}
+@font-face {
+  font-weight: 500;
+  font-family: 'Sailec';
+  src: url('../fonts/sailec/31293A_4_0.eot');
+  src: url('../fonts/sailec/31293A_4_0.eot?#iefix') format('embedded-opentype'), url('../fonts/sailec/31293A_4_0.woff2') format('woff2'), url('../fonts/sailec/31293A_4_0.woff') format('woff'), url('../fonts/sailec/31293A_4_0.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Sailec';
+  font-weight: normal;
+  src: url('../fonts/sailec/31293A_5_0.eot');
+  src: url('../fonts/sailec/31293A_5_0.eot?#iefix') format('embedded-opentype'), url('../fonts/sailec/31293A_5_0.woff2') format('woff2'), url('../fonts/sailec/31293A_5_0.woff') format('woff'), url('../fonts/sailec/31293A_5_0.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Sailec';
+  font-weight: 300;
+  src: url('../fonts/sailec/31293A_6_0.eot');
+  src: url('../fonts/sailec/31293A_6_0.eot?#iefix') format('embedded-opentype'), url('../fonts/sailec/31293A_6_0.woff2') format('woff2'), url('../fonts/sailec/31293A_6_0.woff') format('woff'), url('../fonts/sailec/31293A_6_0.ttf') format('truetype');
+}
+/**
+ * selectize.default.css (v0.12.4) - Default Theme
+ * Copyright (c) 2013–2015 Brian Reavis & contributors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
+ * file except in compliance with the License. You may obtain a copy of the License at:
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ * ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ *
+ * @author Brian Reavis <brian@thirdroute.com>
+ */
+
+html,
+body {
+  position: relative;
+  height: 100vh;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+body {
+  color: #9B9B9B;
+  font-family: "Sailec", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-size: 18px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  vertical-align: baseline;
+  background: #fff;
+
+}
+a {
+  text-decoration: none !important;
+  outline: none;
+}
+a:active {
+  background-color: transparent;
+}
+a:hover {
+  text-decoration: none;
+}
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+header {
+  padding: 10px 0;
+  border-bottom: 1px solid;
+  background-color:grey;
+}
+header h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #ffa500;
+}
+header .page-title {
+  text-align: right;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: white;
+  background-color:;
+}
+.statistic{
+  margin-top:100px;
+}
+.statis.con{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  color:white
+}
+.statis .icon i{
+  color:white;
+}
+.statis .count h1{
+  color:white;
+  font-size:50px;
+  font-weight:bold;
+}
+.statis .count h5{
+  font-size:14px;
+  clear:both;
+}
+.statis .comment a{
+  color:blue;
+  font-size:14px;
+  text-decoration:underline
+}
+.statis .dir a i{
+  color:blue;
+}
+.panel-success .panel-heading{
+  background-color: green;
+  border:1px solid green;
+}
+.panel-success .panel-footer{
+  border:1px solid green;
+}
+.panel-warning .panel-heading{
+  border:1px solid #ff6666;
+  background-color:#ff6666;
+}
+.panel-warning .panel-footer{
+  border:1px solid #ff6666;
+}
+#main-content{
+  overflow-y:auto;
+}
+#main-body{
+  height:100vh;
+}
+#main-body .body_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 0;
+  align-items: stretch;
+  height:100vh;
+}
+#main-body .body_wrapper .left,
+#main-body .body_wrapper .right {
+  flex-basis:20%;
+}
+#main-body .body_wrapper .left {
+  flex-shrink: 0;
+  min-width: 200px;
+  background: #000;
+  margin-right: ;
+}
+#main-body .body_wrapper .left ul li {
+  display: block;
+  padding:0 20px;
+}
+#main-body .body_wrapper .left ul li a {
+  display: block;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 20px;
+  font-weight: bold;
+  color: #f9f9f9;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+#main-body .body_wrapper .left ul li a:hover {
+  color: #ffa500;
+  font-size:18px;
+  padding:17px;
+}
+#main-body .body_wrapper .right {
+  flex-grow: 1;
+  height: 100%;
+  background-color:white;
+  padding:20px;
+}
+#main-body .body_wrapper .right ._wrap .event {
+  position: relative;
+}
+#main-body .body_wrapper .right ._wrap .event.header {
+  display: flex;
+  color: inherit;
+  border-left: 0;
+  border-bottom:3px double lightgrey;
+  padding-top: 10px;
+  font-weight: 600;
+  color: #141414;
+  font-size: 18px;
+}
+#main-body .body_wrapper .right ._wrap .event.header ._date i {
+  color:green;
+}
+#main-body .body_wrapper .right ._wrap .event.header ._date {
+  flex:1;
+  padding-top: 10px;
+}
+#main-body .body_wrapper .right ._wrap .event.header ._floor {
+  flex:1;
+  padding-top: 10px;
+}
+#main-body .body_wrapper .right ._wrap .event.header ._host{
+  flex:1;
+  padding-top: 10px;
+}
+#main-body .body_wrapper .right ._wrap .event.header ._floor i {
+  color:red;
+}
+#main-body .body_wrapper .right ._wrap .event.header ._title {
+  padding-left: 20px;
+  width:25%;
+  padding-top:10px;
+}
+#main-body .body_wrapper .right ._wrap .event.header ._title i {
+  color:orange;
+}
+hr{
+  margin:0px;
+}
+#main-body .body_wrapper .right ._wrap .event > a {
+  display: flex;
+  color: inherit;
+  border-left: 0;
+}
+#main-body .body_wrapper .right ._wrap .event > a:hover {
+  background: rgba(62, 86, 155, 0.1);
+}
+#main-body .body_wrapper .right ._wrap .event > a > div {
+  padding: 10px 0;
+}
+#main-body .body_wrapper .right ._wrap .event > a ._date {
+  flex:1;
+  font-size: 20px;
+}
+#main-body .body_wrapper .right ._wrap .event > a ._date span {
+  display: block;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+#main-body .body_wrapper .right ._wrap .event > a ._title {
+  padding-left: 20px;
+  width:25%;
+}
+#main-body .body_wrapper .right ._wrap .event > a ._host {
+  flex:1;
+}
+#main-body .body_wrapper .right ._wrap .event > a ._time {
+  font-size:14px;
+}
+#main-body .body_wrapper .right ._wrap .event > a ._title h2 {
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 600;
 }
 
-header h1{
-	color:orange;
+#main-body .body_wrapper .right ._wrap .event > a ._floor {
+  padding-top:10px;
+  flex:1;
+  font-weight:bold;
 }
 
-.panel{
-	margin-top:20%;
-	box-shadow:0px 0px 40px 5px lightgrey;
+#main-body .body_wrapper .right ._wrap .title-header{
+  width:100%;
+  text-align:center;
+  word-spacing:40px;
+  border-bottom:1px solid;
 }
 
-.panel-body{
-	background-color:#ffc14d;
+#main-body .body_wrapper .right ._wrap .title-header p span
+{
+  cursor:pointer;
 }
 
-form{
-	margin:20px 0px;
+#main-body .body_wrapper .right ._wrap .title-header p span:first-child
+{
+  border-bottom:5px solid;
 }
 
-button{
-	transition:box-shadow 0.3s;
+#view-more .modal-header,
+#view-more .modal-body,
+#view-more .modal-footer{
+  color:#595959;
+}
+.modal-header{
+  background-color:grey;
+}
+.modal-title h4{
+  font-weight:bold;
+  font-size:22px;
+  color:white;
+}
+.detail{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  padding:0 25px;
+  margin-top:-35px;
+}
+.detail h3{
+  margin:10px 0px;
+  color:grey;
+  font-weight:900;
+  font-size:30px;
+  margin-top:0;
+}
+.detail .page-header{
+  width:100%;
+  padding-bottom:0;
+  margin-bottom:12px;
+}
+.detail .page-header .time{
+  font-weight:normal;
+  font-size:14px;
+  margin:5px 0 0 0;
 }
 
-button:hover{
-	box-shadow:5px 5px 20px grey;
+div.more-info>p, div.detail>div>p, div.other-info>p{
+  font-size:15px;
+  margin-bottom:5px;
+  font-weight:bold;
 }
 
-label{
-	color:white;
-	font-size:18px;
+div.more-info>div.ser>p, div.other-info>div.his>p{
+  color:grey;
+  font-size:14px;
+  padding-left:15px;
+}
+.other-info p{
+  margin-bottom:5px;
+}
+
+.other-info>div>p{
+  margin-bottom:5px;
+  font-size:0.875em;
+}
+.modal-footer .foot{
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content: space-between;
+  padding:0 25px;
+}
+.con-action h3{
+  text-align:left;
+  padding-bottom:5px;
+  font-size:19px;
+  font-weight:bold;
+  color:grey;
+  margin:0px 0px;
+}
+.con-action hr {
+   margin:0
+}
+.con-action p{
+  text-align:left;
+}
+.con-info p{
+  font-size:15px;
+
+}
+legend{
+  color:grey;
+  font-weight: 600;
+  font-size:15px;
+}
+.alert h2{
+  text-align:center;
+  font-weight:bold;
+}
+@media screen and (max-width:1024px){
+  .detail{
+    border-right:none;
+  }
+  .panel-footer{
+    border-top:1px solid lightgrey;
+  }
+  .extra h3{
+    float:none;
+  }
+  .other-info{
+    margin-left:30px;
+  }
+  #main-body .body_wrapper .left ul li {
+    display: block;
+    padding:0 10px;
+  }
 }

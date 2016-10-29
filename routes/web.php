@@ -11,21 +11,35 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/home', 'HomeController@index');
+// Events Booking Section
+Route::get('/', "WelcomeController@index");
 
-Route::get('/book-event', 'BookEventController@index');
+Route::post("/iswWeb", "ISWController@test");
 
-Route::post('/formSubmit', 'BookEventController@store');
+Route::get("/payUs", "ISWController@index");
 
-Route::post("/admin", [ "uses" => "AdminController@index" ]);
-  Route::get("/accept/past", [ "uses" => "PastController@index" ]);
-  Route::get("/admin/accept", [ "uses" => "AcceptController@index" ]);
-  Route::get("/admin/reject", [ "uses" => "RejectController@index" ]);
-  Route::get("/admin/all", [ "uses" => "AllController@index" ]);
+Route::get('/events', "EventController@index");
 
-//Route::get('/login','LoginController@index');
+Route::post("/createEvent", "EventController@store");
 
 Auth::routes();
+
+// Display view with required individual data
+
+Route::get('/home', 'HomeController@index');
+
+Route::get('/admin', 'AdminController@index');
+
+Route::get("/pend", 'PendController@index');
+
+Route::get("/accept", 'AcceptController@index');
+
+Route::get('/cancel', 'CancelController@index');
+
+// Get required data asychronously and updating the database
+
+Route::get('/rec/{id}', 'AdminController@show');
+
+Route::put('/accept/update/{id}', 'AdminController@update');
+
+Route::put('/cancel/update/{id}', 'AdminController@updateCancel');
