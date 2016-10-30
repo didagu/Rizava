@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Route;
 
+use Carbon\Carbon;
+
 use App\Event;
 
 class WelcomeController extends Controller
@@ -17,7 +19,15 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-      $bookings = Event::where("accept_id",1)->where("cancel_id",1)->get();
+      // Get bookings sorted by date and time
+      $bookings = Event::where("accept_id",1)->where("cancel_id",null)->get()->sortBy("event_date")->sortBy("event_start")->filter(function($value,$key){
+        return $value["event_date"] > Carbon::today();
+      });
+
+      foreach($bookings as $booking){
+        $this->accessor($booking);
+      }
+
       // return $bookings;
       // $events = [];
       //

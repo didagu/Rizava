@@ -40,9 +40,8 @@
       <div class="row">
         @foreach($events as $event)
         <div class="col-sm-4">
-          <div class="demo-card-wide mdl-card mdl-shadow--2dp cards-spacing">
-            <div class="mdl-card__title" style="background: url('img/hero.png') center / cover;">
-
+          <div class="demo-card-wide mdl-card mdl-shadow--2dp cards-spacing" style="border-radius:20px 20px 0 0;">
+            <div class="mdl-card__title" style="background: url('http://hrb-family-business.wpengine.netdna-cdn.com/files/2013/11/Family-Business-Consulting-Technology.jpg') center / cover;">
             </div>
             <div class="mdl-card__supporting-text">
               <span>{{ date_format(date_create($event->event_date),"D, M d") }} {{ date_format(date_create($event->event_start),"g:i A") }}</span>
@@ -58,7 +57,7 @@
         @endforeach
 
         <div class="col-sm-4"> <!-- 2nd event card -->
-         <div class="demo-card-wide mdl-card mdl-shadow--2dp cards-spacing">
+         <div class="demo-card-wide mdl-card mdl-shadow--2dp cards-spacing" style="border-radius:20px 20px 0 0;">
             <div class="mdl-card__title" style="background: url('img/hero.png') center / cover;">
             </div>
             <div class="mdl-card__supporting-text">
@@ -72,7 +71,7 @@
         </div>
 
        <div class="col-sm-4"> <!-- 3rd event card -->
-         <div class="demo-card-wide mdl-card mdl-shadow--2dp cards-spacing">
+         <div class="demo-card-wide mdl-card mdl-shadow--2dp cards-spacing" style="border-radius:20px 20px 0 0;">
             <div class="mdl-card__title" style="background: url('img/hero.png') center / cover;">
             </div>
             <div class="mdl-card__supporting-text">
@@ -88,7 +87,7 @@
 <!-- wide cards second row -->
        <div>
         <div class="col-sm-4">
-         <div class="demo-card-wide mdl-card mdl-shadow--2dp cards-spacing">
+         <div class="demo-card-wide mdl-card mdl-shadow--2dp cards-spacing" style="border-radius:20px 20px 0 0;">
             <div class="mdl-card__title" style="background: url('img/hero.png') center / cover;">
             </div>
             <div class="mdl-card__supporting-text">
@@ -102,7 +101,7 @@
         </div>
 
         <div class="col-sm-4">
-         <div class="demo-card-wide mdl-card mdl-shadow--2dp cards-spacing">
+         <div class="demo-card-wide mdl-card mdl-shadow--2dp cards-spacing" style="border-radius:20px 20px 0 0;">
             <div class="mdl-card__title" style="background: url('img/hero.png') center / cover;">
             </div>
             <div class="mdl-card__supporting-text">
@@ -117,7 +116,7 @@
 
 
         <div class="col-sm-4">
-         <div class="demo-card-wide mdl-card mdl-shadow--2dp cards-spacing">
+         <div class="demo-card-wide mdl-card mdl-shadow--2dp cards-spacing" style="border-radius:20px 20px 0 0;">
             <div class="mdl-card__title" style="background: url('img/hero.png') center / cover;">
             </div>
             <div class="mdl-card__supporting-text">
@@ -134,7 +133,7 @@
 
 
         <div class="col-sm-4">
-         <div class="demo-card-wide mdl-card mdl-shadow--2dp cards-spacing">
+         <div class="demo-card-wide mdl-card mdl-shadow--2dp cards-spacing" style="border-radius:20px 20px 0 0;">
          <!-- removed here: style="width: auto; height: auto; margin-top: 10px; margin-bottom: 10px;" -->
             <div class="mdl-card__title" style="background: url('img/hero.png') center / cover;">
             </div>
@@ -149,7 +148,7 @@
         </div>
 
         <div class="col-sm-4">
-         <div class="demo-card-wide mdl-card mdl-shadow--2dp cards-spacing">
+         <div class="demo-card-wide mdl-card mdl-shadow--2dp cards-spacing" style="border-radius:20px 20px 0 0;">
             <div class="mdl-card__title" style="background: url('img/hero.png') center / cover;">
             </div>
             <div class="mdl-card__supporting-text">
@@ -163,7 +162,7 @@
         </div>
 
        <div class="col-sm-4">
-         <div class="demo-card-wide mdl-card mdl-shadow--2dp cards-spacing">
+         <div class="demo-card-wide mdl-card mdl-shadow--2dp cards-spacing" style="border-radius:20px 20px 0 0;">
             <div class="mdl-card__title" style="background: url('img/hero.png') center / cover;">
             </div>
             <div class="mdl-card__supporting-text">

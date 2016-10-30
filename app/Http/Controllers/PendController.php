@@ -22,7 +22,7 @@ class PendController extends Controller
      {
         // Getting only pending data from the database
         $bookings = Event::where("pend_id",1)->where("accept_id",null)->where("cancel_id",null)->get();
-
+        // return $bookings;
         // Initial test section
         // $bookings = Event::all();
         // $a = [];
@@ -89,7 +89,7 @@ class PendController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return $id;
+
     }
 
     /**

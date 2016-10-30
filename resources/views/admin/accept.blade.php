@@ -8,12 +8,12 @@
 <div class="right">
   <div class="_wrap">
     @if(count($bookings) > 0)
-      <!-- <div class="title-header">
+      <div class="title-header">
         <p>
           <span>Upcoming</span>
           <span>Past</span>
         </p>
-      </div> -->
+      </div>
       <div class="event header">
         <div class="_title">
           Event Title
@@ -30,7 +30,7 @@
       </div>
 
       @foreach ($bookings as $booking)
-        <div class="event">
+        <div class="event upcoming">
           <a href="#" data-toggle="modal" data-target="#view-more" title="Accepted">
             <input type="hidden" name="id" value="{{ $booking->id }}">
             <div class="_title">
@@ -54,17 +54,16 @@
         <hr>
       @endforeach
     @else
-    <div class="row">
-      <div class="col-lg-push-2 col-lg-8">
-        <div class="alert alert-info">
-          <h2>
-            NO ACCEPTED BOOKINGS YET!!!
-          </h2>
+      <div class="row">
+        <div class="col-lg-push-2 col-lg-8">
+          <div class="alert alert-info">
+            <h2>
+              NO ACCEPTED BOOKINGS YET!!!
+            </h2>
+          </div>
         </div>
       </div>
-    </div>
     @endif
-
   </div>
 </div>
 @endSection

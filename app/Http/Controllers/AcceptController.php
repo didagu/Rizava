@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Event;
 
+use Carbon\Carbon;
+
 class AcceptController extends Controller
 {
     function __construct(){
@@ -28,6 +30,7 @@ class AcceptController extends Controller
           //    $b[] = $booking;
           //  }
          }
+        //  return Carbon::create();
         //  return $bookings;
          return view("admin.accept")->with("bookings",$bookings);
      }

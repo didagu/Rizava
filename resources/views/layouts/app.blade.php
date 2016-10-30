@@ -8,11 +8,17 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Rizava') }}</title>
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
-
+    <style media="screen">
+      .navbar-brand{
+        font-size: 40px;
+        font-weight: 600;
+        color: #ffa500!important;
+      }
+    </style>
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -22,33 +28,33 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-static-top navbar-inverse">
             <div class="container">
                 <div class="navbar-header">
 
                     <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                    <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                    </button>
+                    </button> -->
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ url('/admin') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
                 </div>
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
+                <!-- <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                    Left Side Of Navbar
                     <ul class="nav navbar-nav">
                         &nbsp;
                     </ul>
 
-                    <!-- Right Side Of Navbar -->
+                    Right Side Of Navbar
                     <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
+                        Authentication Links
                         @if (Auth::guest())
                             <li><a href="{{ url('/login') }}">Login</a></li>
                             <li><a href="{{ url('/register') }}">Register</a></li>
@@ -74,7 +80,7 @@
                             </li>
                         @endif
                     </ul>
-                </div>
+                </div> -->
             </div>
         </nav>
 
