@@ -112,7 +112,7 @@
                         <div class="col-sm-3">
                           <div class="form-group">
                             <label for="event_start">Event start time <span style="color: red;">*</span></label>
-                            <input type="time" class="form-control" name="event_start" required>
+                            <input type="time" min="10:00 AM" max="08:00 PM" class="form-control" name="event_start" required>
                           </div>
                         </div>
 
