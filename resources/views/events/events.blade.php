@@ -173,7 +173,7 @@
                         <div class="col-sm-6">
                           <div class="form-group">
                             <label for="phone_number">Phone Number <span style="color: red;">*</span></label>
-                            <input type="tel" class="form-control" name="phone_number" required>
+                            <input type="tel" maxlength="11" placeholder="08012345678" class="form-control" name="phone_number" required>
                           </div>
                         </div>
 

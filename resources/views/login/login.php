@@ -20,7 +20,7 @@
   <body>
       <header>
         <div class="container-fluid">
-          <h1>Rizava</h1>
+          <h1 style="color: #f99527">Rizava</h1>
       </header>
 
       <section>
