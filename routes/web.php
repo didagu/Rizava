@@ -14,8 +14,6 @@
 // Events Booking Section
 Route::get('/', "WelcomeController@index");
 
-Route::post("/iswWeb", "ISWController@test");
-
 Route::get("/payUs", "ISWController@index");
 
 Route::get('/events', "EventController@index");

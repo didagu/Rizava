@@ -64,7 +64,7 @@ class EventController extends Controller
       // return $request->all();
       $event->save();
 
-      $mess['message'] = 'Form submitted successfully! We\'ll get back to you shortly.';
+      $mess['message'] = 'Successfully submitted your form! Expect a response soon.';
 
       return view('events.feedback')->with('mess', $mess);
     }

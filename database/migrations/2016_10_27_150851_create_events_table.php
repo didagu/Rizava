@@ -19,7 +19,7 @@ class CreateEventsTable extends Migration
             $table->string('company_name');
             $table->string('event_name');
             $table->string('company_website');
-            $table->string('previous_event')->nullable();
+            $table->string('previous_event');
             //services needed
             $table->string('internet_facility')->nullable();
             $table->string('video_coverage')->nullable();
