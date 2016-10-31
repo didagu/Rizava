@@ -25,13 +25,13 @@
 
       @foreach ($bookings as $booking)
       <div class="event">
-        <a href="#" title="Pending">
+        <a href="#" data-toggle="modal" data-target="#view-more" title="Pending">
           <input type="hidden" name="id" value="{{ $booking->id }}">
           <div class="_title">
             <h2>{{ $booking->event_name }}</h2>
           </div>
           <div class="_host">
-            <h4>{{ $booking->company_name }}</h4>
+            <h3>{{ $booking->company_name }}</h3>
           </div>
           <div class="_date">
             {{ $booking->event_date }}

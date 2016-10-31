@@ -45,14 +45,14 @@
 
                         <div class="col-sm-6">
                           <div class="form-group">
-                            <label for="previous_event">Link to previous event (if any)</label>
+                            <label for="previous_event">Link to previous event <span style="color: red;">*</span></label>
                             <input type="url" class="form-control" name="previous_event" value:"http://">
                           </div>
                         </div>
 
                         <div class="col-sm-6">
                         <label for="" style="color: grey;">
-                          Services needed <span style="color:red;">*</span>
+                          Services needed
                         </label><br>
                             <div class="checkbox col-sm-10">
                               <label>
@@ -67,7 +67,7 @@
                                 <input type="checkbox" name="catering" value="Catering"> Catering
                               </label><br>
 
-                            <input type="text" class="form-control" name="other_services" placeholder="Specify Others">
+                            <input type="text" class="form-control" name="other_services" placeholder="Specify others">
 
                             </div>
                         </div>
@@ -93,9 +93,16 @@
 
                         <div class="clearfix"></div>
                         <div class="col-sm-6">
+                          <!-- <div class="form-group">
+                            <label for="event_date">Pick a date <span style="color: red;">*</span></label>
+                            <input type="date" class="form-control" name="event_date" required>
+                          </div> -->
                           <div class="form-group">
                             <label for="event_date">Pick a date <span style="color: red;">*</span></label>
                             <div class="input-group date" data-provide="datepicker" id="datepicker">
+                              <!-- <input type="text" class="form-control" name="event_date">
+                              <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-th"></span> -->
                               </div>
                               <input type="hidden" name="event_date" required>
                             </div>
@@ -119,7 +126,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                               <strong>Which space are you booking? <span style="color: red;">*</span></strong><br><br>
-                                <select name="event_space" id="event_space" >
+                                <select name="event_space" id="event_space" required>
                                   <option value="#" disabled>--------select---------</option>
                                   <option value="rooftop">Rooftop (max 100)</option>
                                   <option value="6th floor">6th floor (max 120)</option>
@@ -133,7 +140,7 @@
                                   <label>
                                     <strong>Is it a paid event? <span style="color: red;">*</span> &nbsp; &nbsp; </strong>
                                   </label>
-                                  <input name="eventPay" type="radio" value="yes"> Yes &nbsp;
+                                  <input name="eventPay" type="radio" value="yes"> Yes
                                  <input name="eventPay" type="radio" value="no" checked>  No
                               </div>
                             </div>
@@ -166,18 +173,9 @@
                         <div class="col-sm-6">
                           <div class="form-group">
                             <label for="phone_number">Phone Number <span style="color: red;">*</span></label>
-                            <input type="tel" class="form-control" name="phone_number" placeholder="Example: 08012345678"
-                              onkeypress="return isNumberKey(event)" required>
+                            <input type="tel" class="form-control" name="phone_number" required>
                           </div>
                         </div>
-                        <script type="text/javascript">
-                          function isNumberKey(evt){
-                            var charCode = (evt.which) ? evt.which : event.keyCode
-                            if (charCode > 31 && (charCode < 48 || charCode > 57))
-                                return false;
-                            return true;
-                          }
-                        </script>
 
                           <div class="clearfix"></div>
                           <div class="row col-sm-8 col-sm-offset-2" >

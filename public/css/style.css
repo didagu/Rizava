@@ -60,7 +60,7 @@
 html,
 body {
   position: relative;
-  overflow-y:hidden;
+  height: 100vh;
 }
 h1,
 h2,
@@ -84,6 +84,7 @@ body {
   font-weight: 400;
   vertical-align: baseline;
   background: #fff;
+
 }
 a {
   text-decoration: none !important;
@@ -93,35 +94,19 @@ a:active {
   background-color: transparent;
 }
 a:hover {
-  text-decoration:none;
+  text-decoration: none;
 }
 ul,
 li {
   padding: 0;
   margin: 0;
 }
-#main-content{
-  display:flex;
-  flex-direction:column;
-  height:100vh;
-}
-header{
-  width:100%;
+header {
   padding: 10px 0;
-  border-bottom: 1px solid black;
-  background-color:#262626;
+  border-bottom: 1px solid;
+  background-color:grey;
 }
-#main-body{
-  flex-grow:1;
-  display:flex;
-  flex-direction:column;
-}
-#main-body .body_wrapper {
-  flex-grow:1;
-  display: flex;
-  flex-direction: row;
-}
-header h2:first-child {
+header h2 {
   font-size: 40px;
   font-weight: 600;
   color: #ffa500;
@@ -176,10 +161,27 @@ header .page-title {
 .panel-warning .panel-footer{
   border:1px solid #ff6666;
 }
-#main-body .body_wrapper .left {
+#main-content{
+  overflow-y:auto;
+}
+#main-body{
+  height:100vh;
+}
+#main-body .body_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 0;
+  align-items: stretch;
+  height:100vh;
+}
+#main-body .body_wrapper .left,
+#main-body .body_wrapper .right {
   flex-basis:20%;
+}
+#main-body .body_wrapper .left {
+  flex-shrink: 0;
   min-width: 200px;
-  background: #333333;
+  background: #000;
   margin-right: ;
 }
 #main-body .body_wrapper .left ul li {
@@ -203,20 +205,20 @@ header .page-title {
   color: #ffa500;
   font-size:18px;
   padding:17px;
-  background:linear-gradient(to bottom,#808080,#a6a6a6);
-  background:-webkit-linear-gradient(bottom,#808080,#a6a6a6);
-  background:-moz-linear-gradient(to bottom,#808080,#a6a6a6);
-  background:-o-linear-gradient(to bottom,#808080,#a6a6a6);
-  border-radius:7px;
 }
 #main-body .body_wrapper .right {
   flex-grow: 1;
+  height: 100%;
   background-color:white;
   padding:20px;
-  overflow-y:auto;
+}
+#main-body .body_wrapper .right ._wrap .event {
+  position: relative;
 }
 #main-body .body_wrapper .right ._wrap .event.header {
   display: flex;
+  color: inherit;
+  border-left: 0;
   border-bottom:3px double lightgrey;
   padding-top: 10px;
   font-weight: 600;
@@ -243,7 +245,7 @@ header .page-title {
 }
 #main-body .body_wrapper .right ._wrap .event.header ._title {
   padding-left: 20px;
-  width:30%;
+  width:25%;
   padding-top:10px;
 }
 #main-body .body_wrapper .right ._wrap .event.header ._title i {
@@ -254,14 +256,11 @@ hr{
 }
 #main-body .body_wrapper .right ._wrap .event > a {
   display: flex;
-  color: #663d00;
-  border-radius:7px;
+  color: inherit;
+  border-left: 0;
 }
 #main-body .body_wrapper .right ._wrap .event > a:hover {
-  background:linear-gradient(to bottom,#bfbfbf,#e6e6e6);
-  background:-webkit-linear-gradient(bottom,#bfbfbf,#e6e6e6);
-  background:-moz-linear-gradient(to bottom,#bfbfbf,#e6e6e6);
-  background:-o-linear-gradient(to bottom,#bfbfbf,#e6e6e6);
+  background: rgba(62, 86, 155, 0.1);
 }
 #main-body .body_wrapper .right ._wrap .event > a > div {
   padding: 10px 0;
@@ -277,14 +276,10 @@ hr{
 }
 #main-body .body_wrapper .right ._wrap .event > a ._title {
   padding-left: 20px;
-  width:30%;
+  width:25%;
 }
 #main-body .body_wrapper .right ._wrap .event > a ._host {
   flex:1;
-  padding-top:20px;
-}
-#main-body .body_wrapper .right ._wrap .event > a ._time {
-  font-size:14px;
 }
 #main-body .body_wrapper .right ._wrap .event > a ._title h2 {
   font-size: 18px;
@@ -406,36 +401,7 @@ legend{
   text-align:center;
   font-weight:bold;
 }
-.loading{
-  display:none;
-  position:fixed;
-  right:0;
-  bottom:0;
-  margin:0 100px 50px 0;
-  background-color:black;
-  padding:5px 20px;
-  border-radius:50px;
-  background:linear-gradient(to bottom,black,#333333);
-  background:-webkit-linear-gradient(bottom,black,#333333);
-  background:-moz-linear-gradient(to bottom,black,#333333);
-  background:-o-linear-gradient(to bottom,black,#333333);
-}
-.loading>p{
-  margin:0;
-  color:white;
-}
-@media screen and (max-width:1023px){
-  #main-body .body_wrapper .left ul li {
-    display: block;
-    padding:0 10px;
-  }
-  #main-body .body_wrapper .right ._wrap .event.header ._host,
-  #main-body .body_wrapper .right ._wrap .event > a ._host {
-    display:none;
-  }
-  #pg-description span{
-    display:none;
-  }
+@media screen and (max-width:1024px){
   .detail{
     border-right:none;
   }
@@ -447,5 +413,9 @@ legend{
   }
   .other-info{
     margin-left:30px;
+  }
+  #main-body .body_wrapper .left ul li {
+    display: block;
+    padding:0 10px;
   }
 }
