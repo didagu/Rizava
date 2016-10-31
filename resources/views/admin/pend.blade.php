@@ -61,5 +61,7 @@
     </div>
   </div>
 </div>
-
+<div class="succ alert alert-success" style="position:fixed;right:0;margin:20px 20px;">
+  {{ $msg }}
+</div>
 @endSection

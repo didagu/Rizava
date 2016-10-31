@@ -102,6 +102,9 @@ li {
 }
 #main-content{
   display:flex;
+  display:-webkit-flex;
+  display:-moz-flex;
+  display:-o-flex;
   flex-direction:column;
   height:100vh;
 }
@@ -114,6 +117,9 @@ header{
 #main-body{
   flex-grow:1;
   display:flex;
+  display:-webkit-flex;
+  display:-moz-flex;
+  display:-o-flex;
   flex-direction:column;
 }
 #main-body .body_wrapper {
@@ -132,49 +138,6 @@ header .page-title {
   text-transform: uppercase;
   color: white;
   background-color:;
-}
-.statistic{
-  margin-top:100px;
-}
-.statis.con{
-  display:flex;
-  flex-direction:row;
-  justify-content:space-between;
-  color:white
-}
-.statis .icon i{
-  color:white;
-}
-.statis .count h1{
-  color:white;
-  font-size:50px;
-  font-weight:bold;
-}
-.statis .count h5{
-  font-size:14px;
-  clear:both;
-}
-.statis .comment a{
-  color:blue;
-  font-size:14px;
-  text-decoration:underline
-}
-.statis .dir a i{
-  color:blue;
-}
-.panel-success .panel-heading{
-  background-color: green;
-  border:1px solid green;
-}
-.panel-success .panel-footer{
-  border:1px solid green;
-}
-.panel-warning .panel-heading{
-  border:1px solid #ff6666;
-  background-color:#ff6666;
-}
-.panel-warning .panel-footer{
-  border:1px solid #ff6666;
 }
 #main-body .body_wrapper .left {
   flex-basis:20%;
@@ -203,15 +166,14 @@ header .page-title {
   color: #ffa500;
   font-size:18px;
   padding:17px;
-  background:linear-gradient(to bottom,#808080,#a6a6a6);
+  /*background:linear-gradient(to bottom,#808080,#a6a6a6);
   background:-webkit-linear-gradient(bottom,#808080,#a6a6a6);
   background:-moz-linear-gradient(to bottom,#808080,#a6a6a6);
   background:-o-linear-gradient(to bottom,#808080,#a6a6a6);
-  border-radius:7px;
+  border-radius:7px;*/
 }
 #main-body .body_wrapper .right {
   flex-grow: 1;
-  background-color:white;
   padding:20px;
   overflow-y:auto;
 }
@@ -222,9 +184,6 @@ header .page-title {
   font-weight: 600;
   color: #141414;
   font-size: 18px;
-}
-#main-body .body_wrapper .right ._wrap .event.header ._date i {
-  color:green;
 }
 #main-body .body_wrapper .right ._wrap .event.header ._date {
   flex:1;
@@ -238,16 +197,10 @@ header .page-title {
   flex:1;
   padding-top: 10px;
 }
-#main-body .body_wrapper .right ._wrap .event.header ._floor i {
-  color:red;
-}
 #main-body .body_wrapper .right ._wrap .event.header ._title {
   padding-left: 20px;
-  width:30%;
+  width:25%;
   padding-top:10px;
-}
-#main-body .body_wrapper .right ._wrap .event.header ._title i {
-  color:orange;
 }
 hr{
   margin:0px;
@@ -277,7 +230,7 @@ hr{
 }
 #main-body .body_wrapper .right ._wrap .event > a ._title {
   padding-left: 20px;
-  width:30%;
+  width:25%;
 }
 #main-body .body_wrapper .right ._wrap .event > a ._host {
   flex:1;
@@ -330,6 +283,9 @@ hr{
 }
 .detail{
   display:flex;
+  display:-webkit-flex;
+  display:-moz-flex;
+  display:-o-flex;
   flex-direction:row;
   flex-wrap:wrap;
   justify-content: space-between;
@@ -375,6 +331,9 @@ div.more-info>div.ser>p, div.other-info>div.his>p{
 }
 .modal-footer .foot{
   display:flex;
+  display:-webkit-flex;
+  display:-moz-flex;
+  display:-o-flex;
   flex-flow:row nowrap;
   justify-content: space-between;
   padding:0 25px;
@@ -424,7 +383,7 @@ legend{
   margin:0;
   color:white;
 }
-@media screen and (max-width:1023px){
+@media all and (max-width:1023px){
   #main-body .body_wrapper .left ul li {
     display: block;
     padding:0 10px;

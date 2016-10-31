@@ -23,7 +23,9 @@ class AdminController extends Controller
     public function index(){
       // Main dashborad statistics
       // Pending Events count
-      $a = Event::where("pend_id",1)->where("accept_id",null)->where("cancel_id",null)->count();
+      $a = Event::where("pend_id",1)
+                  ->where("accept_id",null)
+                  ->where("cancel_id",null)->count();
       // return $a;
       // Accepted Events count
       $b = Event::where("accept_id",1)->where("cancel_id",null)->count();
@@ -31,7 +33,18 @@ class AdminController extends Controller
       // Cancelled Events count
       $c = Event::where("cancel_id",1)->count();
       // return $c;
+      // Getting the events for the week
+      $bookings = Event::where("accept_id",1)
+                          ->where("cancel_id",null)->get()
+                          ->filter(function($value,$key)
+                          {
+                            return $value["event_date"] > Carbon::now()
+                                    && $value["event_date"] < Carbon::now()->endOfWeek();
+                          });
 
+      foreach ($bookings as $booking){
+        $this->accessor($booking);
+      }
 
       // Section is where we initially tried the count with the regular php logic
       // $a = 0;
@@ -48,7 +61,7 @@ class AdminController extends Controller
       //     $c += 1;
       //   }
       // }
-      return view("admin.dashboard", compact("a","b","c"));
+      return view("admin.dashboard", compact("a","b","c","bookings"));
     }
 
     /**
@@ -107,23 +120,9 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $booking = Event::find($id);
-        $booking->accept_id = 1;
-
-        $booking->save();
-        // return $booking;
-        return back();
+        //
     }
 
-    public function updateCancel(Request $request, $id){
-        $booking = Event::find($id);
-
-        $booking->cancel_id = 1;
-        // $booking->accept_id = null;
-        $booking->save();
-        // return $booking;
-        return back();
-    }
     /**
      * Remove the specified resource from storage.
      *

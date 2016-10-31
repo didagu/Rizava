@@ -36,9 +36,13 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-      $mess = [];
-      $mess['message'] = 'Successfully submitted your form! Expect a response soon.';
-
+      $this->validate($request,[
+        "rights" => "accepted",
+        "company_name" => "required",
+        "event_name" => "required",
+        "company_website" => "required|url",
+        "previous_event" => "required",
+      ]);
       $event = new Event;
 
       $event->company_name = $request->company_name;
@@ -63,6 +67,8 @@ class EventController extends Controller
       $event->pend_id = $request->pend_id;
       // return $request->all();
       $event->save();
+
+      $mess;
 
       $mess['message'] = 'Form submitted successfully! We\'ll get back to you shortly.';
 

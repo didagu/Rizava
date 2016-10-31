@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Event;
 
+use Illuminate\Support\Facades\Route;
+
 use App\Http\Requests;
 
 class CancelController extends Controller
@@ -79,7 +81,16 @@ class CancelController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $msg;
+
+      $booking = Event::find($id);
+
+      $booking->cancel_id = 1;
+      // $booking->accept_id = null;
+      $booking->save();
+      $msg[] = [ "msg" => "Successfully Updated"];
+      // return $booking;
+      return view("/".Route::getCurrentRoute()->getPath()."/".$msg);
     }
 
     /**

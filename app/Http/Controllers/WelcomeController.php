@@ -20,12 +20,21 @@ class WelcomeController extends Controller
     public function index()
     {
       // Get bookings sorted by date and time
-      $bookings = Event::where("accept_id",1)->where("cancel_id",null)->get()->sortBy("event_date")->sortBy("event_start")->filter(function($value,$key){
-        return $value["event_date"] > Carbon::today();
-      });
-
-      foreach($bookings as $booking){
+      $bookings = Event::where("accept_id",1)
+                          ->where("cancel_id",null)->get()
+                          ->sortBy("event_date")
+                          ->filter(function($value,$key)
+                          {
+                            return $value["event_date"] > Carbon::today();
+                          });
+      $events;
+      foreach($bookings as $key => $booking){
         $this->accessor($booking);
+        $events[] = $booking;
+        // if(Carbon::)
+        if(count($events) > 8){
+          break;
+        }
       }
 
       // return $bookings;
@@ -37,8 +46,8 @@ class WelcomeController extends Controller
       //       $events[] = $bookings[$i];
       //     }
       // }
-
-      return view("events.welcome")->with("events",$bookings);
+      // return $events;
+      return view("events.welcome")->with("events",$events);
     }
 
     /**

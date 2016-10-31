@@ -18,7 +18,7 @@ class PendController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-     public function index()
+     public function index($msg = null)
      {
         // Getting only pending data from the database
         $bookings = Event::where("pend_id",1)->where("accept_id",null)->where("cancel_id",null)->get();
@@ -34,7 +34,7 @@ class PendController extends Controller
           // }
         }
 
-        return view("admin.pend")->with("bookings",$bookings);
+        return view("admin.pend")->with("bookings",$bookings)->with("msg",$msg);
       }
 
     /**

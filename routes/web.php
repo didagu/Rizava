@@ -30,9 +30,9 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/admin', 'AdminController@index');
 
-Route::get("/pend", 'PendController@index');
+Route::get("/pend/{msg?}", 'PendController@index');
 
-Route::get("/accept", 'AcceptController@index');
+Route::get("/accept/{msg?}", 'AcceptController@index');
 
 Route::get('/cancel', 'CancelController@index');
 
@@ -40,6 +40,8 @@ Route::get('/cancel', 'CancelController@index');
 
 Route::get('/rec/{id}', 'AdminController@show');
 
-Route::put('/accept/update/{id}', 'AdminController@update');
+Route::put('/accept/update/{id}', 'AcceptController@update');
 
-Route::put('/cancel/update/{id}', 'AdminController@updateCancel');
+Route::put('/cancel/update/{id}', 'CancelController@update');
+
+// Route::get("/search/{id}", 'AdminController@search');

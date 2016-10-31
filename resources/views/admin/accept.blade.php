@@ -7,13 +7,50 @@
 @section("content")
 <div class="right">
   <div class="_wrap">
+    <!-- <div class="pull-right" style="position:relative;">
+      <div class="form-group">
+        <input type="text" name="search" value="" style="border-radius:50px;padding-left:35px" class="form-control">
+        <i class="fa fa-search" style="position:absolute;top:0;margin:7px 0 0 10px;"></i>
+      </div>
+      <div style="position:absolute;width:100%;height:50px;border:1px solid black;">
+
+      </div>
+    </div>
+    <div class="clearfix"></div> -->
+    <!-- <script>
+      $( "[name='search']" ).on( "keyup" , function(event){
+        if (event.which in
+        var x = $( this ).val() + " ";
+        $.ajax("/search/" + x,{
+          data : {x},
+          success : function(response,status){
+            console.log(response);
+          }
+        })
+      });
+      // document.getElementsByName("search")[0].onkeyup = function(){
+      //   var x = this.value;
+      //   var xhttp;
+      //   if (window.XMLHttpRequest) {
+      //     xhttp = new XMLHttpRequest();
+      //     } else {
+      //     // code for IE6, IE5
+      //     xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      //   }
+      //   xhttp.onreadystatechange(){
+      //     if(this.readyState = 4 && this.status = 200){
+      //
+      //     }
+      //   }
+      // }
+    </script> -->
     @if(count($bookings) > 0)
-      <div class="title-header">
+      <!-- <div class="title-header">
         <p>
           <span>Upcoming</span>
           <span>Past</span>
         </p>
-      </div>
+      </div> -->
       <div class="event header">
         <div class="_title">
           Event Title
@@ -65,5 +102,8 @@
       </div>
     @endif
   </div>
+</div>
+<div class="succ alert alert-success" style="position:fixed;right:0;margin:20px 20px;">
+  {{ $msg }}
 </div>
 @endSection

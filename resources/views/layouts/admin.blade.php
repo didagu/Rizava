@@ -20,14 +20,18 @@
   <link  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
   <script type="text/javascript" src="{{ URL::asset('js/admin.js') }}"></script>
+  @if(Route::getCurrentRoute()->getPath() == "admin")
+    <link rel="stylesheet" href="/css/master.css">
+  @endif
 </head>
 
 <body>
+  <input type="hidden" name="route" value="{{Route::getCurrentRoute()->getPath()}}">
   <div id="main-content">
     <header>
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-sm-2">
             <a href="/admin">
@@ -67,7 +71,7 @@
                 Cancelled <i class="fa fa-times-circle-o pull-right"></i>
               </a>
             </li>
-            <li style="position:fixed;bottom:0;min-width:275px">
+            <li style="position:absolute;bottom:0;min-width:275px">
               <a href="{{ url('/logout') }}"
                 onclick="event.preventDefault();
                   document.getElementById('logout-form').submit();">

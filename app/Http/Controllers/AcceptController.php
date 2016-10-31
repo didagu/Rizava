@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Event;
 
+use Illuminate\Support\Facades\Route;
+
 use Carbon\Carbon;
 
 class AcceptController extends Controller
@@ -18,7 +20,7 @@ class AcceptController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-     public function index()
+     public function index($msg = null)
      {
          $bookings = Event::where("accept_id",1)->where("cancel_id",null)->get();
         //  $b = [];
@@ -32,7 +34,8 @@ class AcceptController extends Controller
          }
         //  return Carbon::create();
         //  return $bookings;
-         return view("admin.accept")->with("bookings",$bookings);
+        $msg = [];
+        return view("admin.accept")->with("bookings",$bookings)->with("msg",$msg);
      }
 
     /**
@@ -87,7 +90,15 @@ class AcceptController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $msg;
+
+      $booking = Event::find($id);
+      $booking->accept_id = 1;
+
+      $booking->save();
+      $msg[] = ["msg" => "Successfully Updated!"];
+      // return $booking;
+      return view("/".Route::getCurrentRoute()->getPath())->with("msg", $msg);
     }
 
     /**
